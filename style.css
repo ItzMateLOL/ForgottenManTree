@@ -1,4 +1,3 @@
-/* Cargamos la fuente local */
 @font-face {
   font-family: 'Determination';
   src: url('determination.ttf') format('truetype');
@@ -24,7 +23,6 @@ audio {
   display: none;
 }
 
-/* Caja de diálogo estilo Undertale sin botón */
 #cajaDialogo {
   position: fixed;
   bottom: 30px;
@@ -33,7 +31,6 @@ audio {
   width: 85%;
   max-width: 500px;
   
-  /* Evita que la caja cambie de tamaño mientras se tipea */
   min-height: 120px;
   box-sizing: border-box;
 
