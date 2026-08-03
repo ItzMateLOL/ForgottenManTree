@@ -1,7 +1,7 @@
 /* Cargamos la fuente local */
 @font-face {
   font-family: 'Determination';
-  src: url('../Determination.ttf') format('truetype');
+  src: url('Determination.ttf') format('truetype');
 }
 
 body {
