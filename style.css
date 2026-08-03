@@ -1,0 +1,63 @@
+/* Cargamos la fuente local */
+@font-face {
+  font-family: 'Determination';
+  src: url('../Determination.ttf') format('truetype');
+}
+
+body {
+  background-color: black;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  user-select: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+audio {
+  display: none;
+}
+
+/* Caja de diálogo estilo Undertale sin botón */
+#cajaDialogo {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  max-width: 500px;
+  
+  /* Evita que la caja cambie de tamaño mientras se tipea */
+  min-height: 120px;
+  box-sizing: border-box;
+
+  background-color: #000;
+  border: 5px solid #fff;
+  border-radius: 0px;
+  padding: 16px;
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.dialogo-oculto {
+  display: none !important;
+}
+
+#textoDialogo {
+  margin: 0;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  
+  /* Aplicamos la tipografía descargada */
+  font-family: 'Determination', monospace;
+  font-size: 24px; /* Determination se ve excelente en 20px - 28px */
+  letter-spacing: 1px;
+}
