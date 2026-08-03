@@ -17,13 +17,11 @@
   <audio id="sonidoHuevo" preload="auto">
     <source src="egg.mp3" type="audio/mpeg">
   </audio>
-
-  <!-- Audio para el blip de texto -->
+  
   <audio id="sonidoTexto" preload="auto">
     <source src="text.mp3" type="audio/wav">
   </audio>
-
-  <!-- Caja de diálogo sin botón -->
+  
   <div id="cajaDialogo" class="dialogo-oculto" onclick="cerrarDialogo(event)">
     <p id="textoDialogo"></p>
   </div>
@@ -32,12 +30,9 @@
     let audioIniciado = false;
     let contadorClics = 0;
 
-    // Variables para el efecto letra por letra (Typewriter)
     let intervaloTexto = null;
     let escribiendo = false;
     let textoCompletoActual = "";
-
-    // Intentar reproducir automáticamente al cargar la página (Ideal para PC)
     window.addEventListener('DOMContentLoaded', () => {
       reproducirAudio();
     });
@@ -102,7 +97,6 @@
         audio.play().then(() => {
           audioIniciado = true;
         }).catch(error => {
-          // Si el navegador bloquea el Autoplay (ej. en móviles), esperará al primer clic
           console.log("Autoplay bloqueado por el navegador, se iniciará con toque/clic.");
         });
         return true;
@@ -117,8 +111,6 @@
         cerrarDialogo(evento);
         return;
       }
-
-      // En caso de que el autoplay se haya bloqueado, esto lo enciende al primer clic
       reproducirAudio();
 
       if (evento.target === document.body) {
