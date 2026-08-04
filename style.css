@@ -1,0 +1,94 @@
+@font-face {
+  font-family: 'Determination';
+  src: url('determination.ttf') format('truetype');
+}
+
+body {
+  background-color: black;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  user-select: none;
+}
+
+audio {
+  display: none;
+}
+
+#cajaDialogo {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  max-width: 500px;
+  min-height: 120px;
+  box-sizing: border-box;
+
+  background-color: #000;
+  border: 5px solid #fff;
+  border-radius: 0px;
+  padding: 16px;
+  color: #fff;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.dialogo-oculto {
+  display: none !important;
+}
+
+#textoDialogo {
+  margin: 0;
+  line-height: 1.4;
+  white-space: pre-wrap;
+
+  font-family: 'Determination', monospace;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.escena {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 80dvh; 
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  #arbol {
+    width: 180px;
+  }
+  #suelo {
+    width: 230px;
+    margin-top: -125px;
+  }
+  #suelo2 {
+    width: 60px;
+    height: 30dvh; 
+    margin-top: -10px;
+  }
+}
+
+
+@media (min-width: 769px) {
+  #arbol {
+    width: 220px;
+  }
+  #suelo {
+    width: 280px;
+    margin-top: -150px;
+  }
+  #suelo2 {
+    width: 72px;
+    height: 17vh; 
+    max-height: 200px;
+    margin-top: -10px;
+  }
+}
