@@ -92,3 +92,21 @@ audio {
     margin-top: -10px;
   }
 }
+
+@media (max-width: 600px) {
+  #arbol {
+    width: 160px !important; /* Árbol un toque más compacto */
+    transform: translate(8px, 12px) !important;
+  }
+  
+  #suelo {
+    width: 210px !important;
+    margin-top: -105px !important;
+  }
+  
+  #suelo2 {
+    width: 55px !important;
+    height: 28vh !important;
+    margin-top: -8px !important;
+  }
+}
